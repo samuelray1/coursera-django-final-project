@@ -61,7 +61,7 @@
                             <div class="card-header"><h5>{{ question.content }}</h5></div>
                             {% csrf_token %}
                             <div class="form-group">
-                                {% for choice in question.choice.all %}
+                                {% for choice in question.choice_set.all %}
                                 <div class="form-check">
                                     <label class="form-check-label">
                                         <input type="checkbox" name="choice_{{choice.id}}"
